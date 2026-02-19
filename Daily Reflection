@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오늘의 문장</title>
+<style>
+body{
+    margin:0;
+    background:#2a2a2a;
+    color:#f5f5f5;
+    font-family: 'Pretendard', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+    padding:20px;
+}
+.card{
+    max-width:500px;
+}
+h1{
+    font-size:18px;
+    opacity:0.6;
+}
+.quote{
+    font-size:26px;
+    margin-top:20px;
+    line-height:1.5;
+}
+.footer{
+    margin-top:40px;
+    font-size:14px;
+    opacity:0.4;
+}
+</style>
+</head>
+<body>
+<div class="card">
+<h1>오늘의 문장</h1>
+<div class="quote" id="quote"></div>
+<div class="footer">Buddha Object · ThinkHaus</div>
+</div>
+
+<script>
+const quotes = [
+"마음이 고요하면 세상도 고요하다.",
+"비우면 채워진다.",
+"모든 것은 지나간다.",
+"지금 이 순간이 가장 소중하다.",
+"놓아야 자유로워진다."
+];
+
+const random = quotes[Math.floor(Math.random()*quotes.length)];
+document.getElementById("quote").innerText = random;
+</script>
+
+</body>
+</html>
